@@ -7,7 +7,11 @@ use(BetterErrors::Middleware)
 BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
-get ("/") do
+get("/") do
+  erb(:elephant)
+end
+
+#get ("/") do
   "<h1>Dice Roll</h1>
 
   <ul>
@@ -18,9 +22,8 @@ get ("/") do
     <li><a href = https://studious-guide-97jj9w9vvwwj2pr4w-4567.app.github.dev/dice/1/20>Roll one 20-sided die</a></li>
 
     <li><a href = https://studious-guide-97jj9w9vvwwj2pr4w-4567.app.github.dev/dice/5/4>Roll five 4-sided die</a></li>
-  </ul>"
-  
-end
+  </ul>" 
+#end
 
 get ("/zebra") do
   "We must add a route for each path we want to support"
